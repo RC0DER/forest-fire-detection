@@ -113,14 +113,20 @@ npm run dev
   -Vite will provide a local URL (typically): http://localhost:5173
 
 🗺 Dashboard Modules
-  -Sensor Reading Panel
-    Displays live values from all connected sensors
-    
-  -Map View
-    Shows fire location using GPS coordinates
-    
-  -Alert System
-    Highlights fire detection events in real time
+  - **Sensor Reading Panel**
+    - Displays real-time temperature, humidity, gas, air quality, and flame status
+  
+  - **Live Map View**
+    - Shows GPS-based fire location using Leaflet
+    - Automatically updates when new coordinates are received
+  
+  - **Alert System**
+    - Triggers real-time fire alerts based on sensor thresholds
+    - Visual warning indicators for critical conditions
+  
+  - **Realtime Data Sync**
+    - Continuous data updates from Firebase without page refresh
+
 
   📂 Project Structure
     forest-fire-detection/
@@ -139,21 +145,19 @@ npm run dev
   
   -Academic and IoT research projects
 
-🔮 Future Improvements
+projects
 
-  -Fire prediction system using ML
-    Predict fire risk before ignition using historical sensor data
-    Temperature, humidity, gas trends analysis
-    
-  -Historical data analytics dashboard
+🔮 Future Improvements
+  - **Fire Prediction System**
+    - Machine learning–based prediction using historical sensor data
+    - Early fire risk estimation before ignition
   
-  -Multi-node sensor tracking
-  
-  -SMS / Email / App notification alerts
-  
-  -Role-based user access
-  
-  -Mobile-first dashboard UI
+  - Historical data visualization and analytics
+  - Multi-sensor node and region-wise monitoring
+  - SMS / Email / Mobile app alert notifications
+  - User authentication and role-based access
+  - Mobile-responsive and offline-capable dashboard
+
 
 📜 License
   -This project is open-source and intended for educational, research, and experimental use.
