@@ -114,16 +114,13 @@ npm run dev
 
 🗺 Dashboard Modules
   -Sensor Reading Panel
-  
-    --Displays live values from all connected sensors
+    Displays live values from all connected sensors
     
   -Map View
-  
-    --Shows fire location using GPS coordinates
+    Shows fire location using GPS coordinates
     
   -Alert System
-  
-    --Highlights fire detection events in real time
+    Highlights fire detection events in real time
 
   📂 Project Structure
     forest-fire-detection/
@@ -145,10 +142,8 @@ npm run dev
 🔮 Future Improvements
 
   -Fire prediction system using ML
-  
-    --Predict fire risk before ignition using historical sensor data
-    
-    --Temperature, humidity, gas trends analysis
+    Predict fire risk before ignition using historical sensor data
+    Temperature, humidity, gas trends analysis
     
   -Historical data analytics dashboard
   
