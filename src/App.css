@@ -1,0 +1,283 @@
+/* Dashboard Layout - 50/50 split */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.dashboard__map {
+  height: 100vh;
+  overflow: hidden;
+  border-right: 1px solid var(--color-border);
+}
+
+.dashboard__panels {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--color-bg-primary);
+}
+
+.dashboard__panels-content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Map View */
+.map-view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-bg-secondary);
+}
+
+.map-view__container {
+  width: 100%;
+  height: 100%;
+}
+
+.map-view__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-secondary);
+  z-index: 1000;
+}
+
+.map-view__placeholder-text {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+}
+
+/* Custom Pin Marker */
+.custom-pin-marker {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-pin-marker svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease;
+}
+
+.custom-pin-marker:hover svg {
+  transform: scale(1.1);
+}
+
+/* Fire Score Card */
+.fire-score-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.fire-score-card__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.fire-score-card__value {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  line-height: 1;
+  margin: var(--spacing-sm) 0;
+}
+
+.fire-score-card__value--success {
+  color: var(--color-success);
+}
+
+.fire-score-card__value--warning {
+  color: var(--color-warning);
+}
+
+.fire-score-card__value--danger {
+  color: var(--color-danger);
+}
+
+.fire-score-card__value--default {
+  color: var(--color-text-secondary);
+}
+
+.fire-score-card__status {
+  margin-top: var(--spacing-xs);
+}
+
+.fire-score-card__timestamp {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-xs);
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge--success {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-badge--warning {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: var(--color-warning);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status-badge--danger {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: var(--color-danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status-badge--default {
+  background-color: rgba(107, 114, 128, 0.2);
+  color: var(--color-default);
+  border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+/* Sensor Grid */
+.sensor-grid {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+}
+
+.sensor-grid--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.sensor-grid__empty-message {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+}
+
+.sensor-grid__header {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sensor-grid__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.sensor-grid__timestamp {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.sensor-grid__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* Sensor Card */
+.sensor-card {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.sensor-card__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.sensor-card__value {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.sensor-card__unit {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.sensor-card--flame {
+  grid-column: 1 / -1;
+}
+
+.sensor-card--flame .sensor-card__value {
+  font-size: var(--font-size-xl);
+}
+
+/* Scrollbar styling */
+.dashboard__panels::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard__panels::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+.dashboard__panels::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.dashboard__panels::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .dashboard__map {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .sensor-grid__content {
+    grid-template-columns: 1fr;
+  }
+}
+
