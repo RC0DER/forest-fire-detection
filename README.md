@@ -114,10 +114,15 @@ npm run dev
 
 🗺 Dashboard Modules
   -Sensor Reading Panel
+  
     --Displays live values from all connected sensors
+    
   -Map View
+  
     --Shows fire location using GPS coordinates
+    
   -Alert System
+  
     --Highlights fire detection events in real time
 
   📂 Project Structure
@@ -128,19 +133,31 @@ npm run dev
     ├── vite.config.js    # Vite configuration
 
 🎯 Use Cases
+
   -Forest fire monitoring and early warning
+  
   -Remote environmental surveillance
+  
   -Smart forestry systems
+  
   -Academic and IoT research projects
 
 🔮 Future Improvements
+
   -Fire prediction system using ML
+  
     --Predict fire risk before ignition using historical sensor data
+    
     --Temperature, humidity, gas trends analysis
+    
   -Historical data analytics dashboard
+  
   -Multi-node sensor tracking
+  
   -SMS / Email / App notification alerts
+  
   -Role-based user access
+  
   -Mobile-first dashboard UI
 
 📜 License
