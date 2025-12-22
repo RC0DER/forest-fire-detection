@@ -2,14 +2,14 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
 
 const firebaseConfig = {
-apiKey: "AIzaSyApM1u74_hhEICXfJbsvyn_uGzdkm3wm-0",
-  authDomain: "forest-fire-detection-35fc0.firebaseapp.com",
-  databaseURL: "https://forest-fire-detection-35fc0-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "forest-fire-detection-35fc0",
-  storageBucket: "forest-fire-detection-35fc0.firebasestorage.app",
-  messagingSenderId: "515450545660",
-  appId: "1:515450545660:web:820cafc2f1b1b567a3be79",
-  measurementId: "G-KL1LW9NJCR"
+  apiKey: "FIREBASE_API_KEY",
+  authDomain: "PROJECT_ID.firebaseapp.com",
+  databaseURL: "FIREBASE_DATABASE_URL",
+  projectId: "FIREBASE_PROJECT_ID",
+  storageBucket: "FIREBASE_PROJECT_ID.appspot.com",
+  messagingSenderId: "MESSAGING_SENDER_ID",
+  appId: "APP_ID",
+  measurementId: "MEASUREMENT_ID"
 };
 
 const isFirebaseConfigured = firebaseConfig.apiKey !== "your-api-key" && firebaseConfig.databaseURL !== "your-database-url";
